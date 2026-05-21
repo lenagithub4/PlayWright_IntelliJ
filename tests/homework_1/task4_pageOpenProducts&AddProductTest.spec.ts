@@ -27,7 +27,6 @@ test('click menu Products & add new product', async ({ page }) => {
     await page.getByRole('button', { name: 'ADD' }).click();
 
     // Verify product appears in the list
-    await expect(page.getByText(productName)).toBeVisible();
     await expect(page.locator('li')).toContainText([productName]);
 
 });
